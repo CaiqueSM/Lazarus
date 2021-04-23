@@ -1,0 +1,390 @@
+unit game_controller;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  game_models, graph;
+
+{Person}
+function CheckMoveBlockInStageToUp(CurrentPositionY: integer;
+  CurrentDirection: smallint): boolean;
+function CheckMoveBlockInStageToDown(CurrentPositionY, LengthM: integer): boolean;
+function CheckMoveBlockInStageToLeft(CurrentPositionX: integer;
+  CurrentDirection: smallint): boolean;
+function CheckMoveBlockInStageToRight(CurrentPositionX, LengthN: integer;
+  CurrentDirection: smallint): boolean;
+procedure MoveBlockInStageToUp(var Block: Person);
+procedure MoveBlockInStageToDown(var Block: Person);
+procedure MoveBlockInStageToLeft(var Block: Person);
+procedure MoveBlockInStageToRight(var Block: Person);
+function DetectCollisionUp(var Board: TMatrix; var Block: TMatrix;
+  LastPositionX, LastPositionY: integer): boolean;
+function DetectCollisionDown(var Board: TMatrix; var Block: TMatrix;
+  LastPositionX, LastPositionY: integer): boolean;
+function DetectCollisionLeft(var Board: TMatrix; var Block: TMatrix;
+  LastPositionX, LastPositionY: integer): boolean;
+function DetectCollisionRight(var Board: TMatrix; var Block: TMatrix;
+  LastPositionX, LastPositionY: integer): boolean;
+function CanSpin(var Board: TMatrix; var Block: Person): boolean;
+procedure SpinBlockInStage(var Shape: TMatrix; var CurrentDirection: word);
+function MoveUp(var Board: Stage; var Block: Person): boolean;
+function MoveDown(var Board: Stage; var Block: Person): boolean;
+function MoveLeft(var Board: Stage; var Block: Person): boolean;
+function MoveRight(var Board: Stage; var Block: Person): boolean;
+
+{Stage}
+procedure AddBlockInStage(var Board: TMatrix; Block: TMatrix;
+  LastPositionX, LastPositionY, Identity: integer);
+procedure RemoveBlockInStage(var Board: TMatrix; Block: TMatrix;
+  LastPositionX, LastPositionY: integer);
+procedure DrawStage(var Board: TMatrix; Color: byte; Identity: integer);
+procedure HideBlockInStage(var Board: TMatrix; Identity: integer);
+function FindInStage(var Board: Tmatrix; x, y: integer): integer;
+
+implementation
+
+{person}
+
+function CheckMoveBlockInStageToUp(CurrentPositionY: integer;
+  CurrentDirection: smallint): boolean;
+begin
+  if CurrentPositionY > (0 - (CurrentDirection - 1)) then
+  begin
+    Result := True;
+    exit;
+  end;
+  Result := False;
+end;
+
+function CheckMoveBlockInStageToDown(CurrentPositionY, LengthM: integer): boolean;
+begin
+  if CurrentPositionY < LengthM - 1 then
+  begin
+    Result := True;
+    exit;
+  end;
+  Result := False;
+end;
+
+function CheckMoveBlockInStageToLeft(CurrentPositionX: integer;
+  CurrentDirection: smallint): boolean;
+begin
+  if CurrentPositionX > (0 - (CurrentDirection - 1)) then
+  begin
+    Result := True;
+    exit;
+  end;
+  Result := False;
+end;
+
+function CheckMoveBlockInStageToRight(CurrentPositionX, LengthN: integer;
+  CurrentDirection: smallint): boolean;
+begin
+  if CurrentDirection = 2 then
+  begin
+    if CurrentPositionX < (LengthN - CurrentDirection) then
+    begin
+      Result := True;
+      exit;
+    end;
+  end
+  else
+  begin
+    if CurrentPositionX < (LengthN - (CurrentDirection + 2)) then
+    begin
+      Result := True;
+      exit;
+    end;
+  end;
+  Result := False;
+end;
+
+procedure MoveBlockInStageToUp(var Block: Person);
+begin
+  Block.PositionY := Block.PositionY - 1;
+end;
+
+procedure MoveBlockInStageToDown(var Block: Person);
+begin
+  Block.PositionY := Block.PositionY + 1;
+end;
+
+procedure MoveBlockInStageToLeft(var Block: Person);
+begin
+  Block.PositionX := Block.PositionX - 1;
+end;
+
+procedure MoveBlockInStageToRight(var Block: Person);
+begin
+  Block.PositionX := Block.PositionX + 1;
+end;
+
+function DetectCollisionUp(var Board: TMatrix; var Block: TMatrix;
+  LastPositionX, LastPositionY: integer): boolean;
+var
+  row, column: integer;
+begin
+  for row := 0 to Block.lengthM - 1 do
+  begin
+    for column := 0 to Block.lengthN - 1 do
+    begin
+      if Block.Grid[row][column] = 1 then
+      begin
+        if Board.Grid[LastPositionY + row - 1][LastPositionX + column] <> 0 then
+        begin
+          Result := True;
+          exit;
+        end;
+      end;
+    end;
+  end;
+  Result := False;
+end;
+
+function DetectCollisionDown(var Board: TMatrix; var Block: TMatrix;
+  LastPositionX, LastPositionY: integer): boolean;
+var
+  row, column: integer;
+begin
+  for row := 0 to Block.lengthM - 1 do
+  begin
+    for column := 0 to Block.lengthN - 1 do
+    begin
+      if Block.Grid[row][column] = 1 then
+      begin
+        if Board.Grid[LastPositionY + row + 1][LastPositionX + column] <> 0 then
+        begin
+          Result := True;
+          exit;
+        end;
+      end;
+    end;
+  end;
+  Result := False;
+end;
+
+function DetectCollisionRight(var Board: TMatrix; var Block: TMatrix;
+  LastPositionX, LastPositionY: integer): boolean;
+var
+  row, column: integer;
+begin
+  for row := 0 to Block.lengthM - 1 do
+  begin
+    for column := 0 to Block.lengthN - 1 do
+    begin
+      if Block.Grid[row][column] = 1 then
+      begin
+        if Board.Grid[LastPositionY + row][LastPositionX + column + 1] <> 0 then
+        begin
+          Result := True;
+          exit;
+        end;
+      end;
+    end;
+  end;
+  Result := False;
+end;
+
+function DetectCollisionLeft(var Board: TMatrix; var Block: TMatrix;
+  LastPositionX, LastPositionY: integer): boolean;
+var
+  row, column: integer;
+begin
+  for row := 0 to Block.lengthM - 1 do
+  begin
+    for column := 0 to Block.lengthN - 1 do
+    begin
+      if Block.Grid[row][column] = 1 then
+      begin
+        if Board.Grid[LastPositionY + row][LastPositionX + column - 1] <> 0 then
+        begin
+          Result := True;
+          exit;
+        end;
+      end;
+    end;
+  end;
+  Result := False;
+end;
+
+function CanSpin(var Board: TMatrix; var Block: Person): boolean;
+begin
+  if Block.Direction = 2 then
+  begin
+    if not (DetectCollisionRight(Board, Block.Shape, Block.PositionX,
+      Block.PositionY)) then
+      if not (DetectCollisionLeft(Board, Block.Shape, Block.PositionX,
+        Block.PositionY)) then
+      begin
+        Result := True;
+        exit;
+      end;
+  end
+  else
+  begin
+    if not (DetectCollisionDown(Board, Block.Shape, Block.PositionX,
+      Block.PositionY)) then
+    begin
+      Result := True;
+      exit;
+    end;
+  end;
+  Result := False;
+end;
+
+procedure SpinBlockInStage(var Shape: TMatrix; var CurrentDirection: word);
+
+var
+  row, column: integer;
+  Buffer:      TMatrix;
+
+begin
+  Buffer := TMatrix.Create(Shape.LengthM, Shape.LengthN);
+  Buffer.ClearAll;
+  for row := 0 to Shape.LengthM - 1 do
+  begin
+    for column := 0 to Shape.LengthN - 1 do
+    begin
+      if Shape.Grid[row][column] = 1 then
+        Buffer.Grid[column][abs((row + 1) - Buffer.LengthM)] := 1;
+    end;
+  end;
+  case CurrentDirection of
+    1: CurrentDirection := CurrentDirection shl 1;
+    2: CurrentDirection := CurrentDirection shr 1;
+  end;
+  Shape := Buffer;
+end;
+
+{Stage}
+procedure AddBlockInStage(var Board: TMatrix; Block: TMatrix;
+  LastPositionX, LastPositionY, Identity: integer);
+var
+  row, column: integer;
+begin
+  for row := 0 to Block.lengthM - 1 do
+  begin
+    for column := 0 to Block.lengthN - 1 do
+    begin
+      if Block.Grid[row][column] = 1 then
+      begin
+        Board.Grid[LastPositionY + row][LastPositionX + column] :=
+          Identity;
+      end;
+    end;
+  end;
+end;
+
+procedure RemoveBlockInStage(var Board: TMatrix; Block: TMatrix;
+  LastPositionX, LastPositionY: integer);
+var
+  row, column: integer;
+begin
+  for row := 0 to Block.lengthM - 1 do
+  begin
+    for column := 0 to Block.lengthN - 1 do
+    begin
+      if Block.Grid[row][column] = 1 then
+        Board.Grid[LastPositionY + row][LastPositionX + column] := 0;
+    end;
+  end;
+end;
+
+procedure DrawStage(var Board: TMatrix; Color: byte; Identity: integer);
+var
+  row, column: integer;
+  x, y: integer;
+begin
+  x := 0;
+  y := 0;
+  for row := 0 to Board.LengthM - 1 do
+  begin
+    for column := 0 to Board.LengthN - 1 do
+    begin
+      if Board.Grid[row][column] = Identity then
+      begin
+        Setfillstyle(1, Color);
+        bar(x, y, x + 16, y + 16);
+        rectangle(x, y, x + 16, y + 16);
+      end;
+      x := x + 16;
+    end;
+    x := 0;
+    y := y + 16;
+  end;
+end;
+
+procedure HideBlockInStage(var Board: TMatrix; Identity: integer);
+begin
+  SetColor(Black);
+  DrawStage(Board, Black, Identity);
+  SetColor(white);
+end;
+
+function FindInStage(var Board: TMatrix; x, y: integer): integer;
+begin
+  Result := Board.Grid[x][y];
+  writeln(x,' ', y, ' ', Result);
+end;
+
+function MoveUp(var Board: Stage; var Block: Person): boolean;
+begin
+  if CheckMoveBlockInStageToUp(Block.PositionY, Block.Direction) then
+  begin
+    if not DetectCollisionUp(Board.Grid, Block.Shape, Block.PositionX,
+      Block.PositionY) then
+    begin
+      MoveBlockInStageToUp(Block);
+      Result := False;
+      exit;
+    end;
+  end;
+  Result := True;
+end;
+
+function MoveDown(var Board: Stage; var Block: Person): boolean;
+begin
+  if CheckMoveBlockInStageToDown(Block.PositionY, Board.Grid.LengthM) then
+  begin
+    if not DetectCollisionDown(Board.Grid, Block.Shape, Block.PositionX,
+      Block.PositionY) then
+    begin
+      MoveBlockInStageToDown(Block);
+      Result := False;
+      exit;
+    end;
+  end;
+  Result := True;
+end;
+
+function MoveLeft(var Board: Stage; var Block: Person): boolean;
+begin
+  if CheckMoveBlockInStageToLeft(Block.PositionX, Block.Direction) then
+    if not DetectCollisionLeft(Board.Grid, Block.Shape, Block.PositionX,
+      Block.PositionY) then
+    begin
+      MoveBlockInStageToLeft(Block);
+      Result := True;
+    end
+    else
+      Result := False;
+end;
+
+function MoveRight(var Board: Stage; var Block: Person): boolean;
+begin
+  if CheckMoveBlockInStageToRight(Block.PositionX, Board.Grid.LengthM,
+    Block.Direction) then
+    if not DetectCollisionRight(Board.Grid, Block.Shape, Block.PositionX,
+      Block.PositionY) then
+    begin
+      MoveBlockInStageToRight(Block);
+      Result := True;
+    end
+    else
+      Result := False;
+end;
+
+end.
+

@@ -1,0 +1,368 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <PathDelim Value="\"/>
+    <Version Value="7"/>
+    <General>
+      <Flags>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+      </Flags>
+      <MainUnit Value="0"/>
+      <TargetFileExt Value=".exe"/>
+      <Icon Value="0"/>
+      <UseXPManifest Value="True"/>
+      <ActiveEditorIndexAtStart Value="5"/>
+    </General>
+    <VersionInfo>
+      <ProjectVersion Value=""/>
+      <Language Value=""/>
+      <CharSet Value=""/>
+    </VersionInfo>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <Units Count="23">
+      <Unit0>
+        <Filename Value="tetris_v4.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="tetris_v4"/>
+        <CursorPos X="7" Y="12"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="0"/>
+        <UsageCount Value="194"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="modelos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BlocosModelo"/>
+        <CursorPos X="20" Y="1"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="194"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\rtl\inc\objpash.inc"/>
+        <CursorPos X="8" Y="195"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="8"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="BlocosModelo.pas"/>
+        <UnitName Value="Tetramino_source"/>
+        <CursorPos X="1" Y="36"/>
+        <TopLine Value="14"/>
+        <UsageCount Value="8"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="blocosformas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Tetramino_Shape"/>
+        <CursorPos X="11" Y="7"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="190"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="tetramino_shape.pas"/>
+        <UnitName Value="Tetramino_Shape"/>
+        <CursorPos X="28" Y="106"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="4"/>
+        <UsageCount Value="88"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="tetramino_source.pas"/>
+        <UnitName Value="Tetramino_source"/>
+        <CursorPos X="3" Y="8"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="5"/>
+        <UsageCount Value="84"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="tetramino_controller.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="tetramino_controller"/>
+        <CursorPos X="26" Y="270"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="3"/>
+        <UsageCount Value="188"/>
+        <Loaded Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\packages\fpmkunit\src\fpmkunit.pp"/>
+        <UnitName Value="fpmkunit"/>
+        <CursorPos X="5" Y="317"/>
+        <TopLine Value="306"/>
+        <UsageCount Value="7"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\rtl\inc\objpas.inc"/>
+        <CursorPos X="19" Y="183"/>
+        <TopLine Value="161"/>
+        <UsageCount Value="8"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\rtl\inc\system.inc"/>
+        <CursorPos X="17" Y="170"/>
+        <TopLine Value="157"/>
+        <UsageCount Value="8"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\rtl\i386\i386.inc"/>
+        <CursorPos X="4" Y="183"/>
+        <TopLine Value="183"/>
+        <UsageCount Value="8"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\rtl\inc\systemh.inc"/>
+        <CursorPos X="3" Y="314"/>
+        <TopLine Value="303"/>
+        <UsageCount Value="3"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\packages\graph\src\win32\graph.pp"/>
+        <UnitName Value="Graph"/>
+        <CursorPos X="5" Y="479"/>
+        <TopLine Value="443"/>
+        <UsageCount Value="4"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="tetris_library.pas"/>
+        <UnitName Value="Tetris_library"/>
+        <CursorPos X="16" Y="144"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="55"/>
+        <Loaded Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="stage_controller.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Stage_Controller"/>
+        <CursorPos X="16" Y="151"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="2"/>
+        <UsageCount Value="126"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\rtl\objpas\objpas.pp"/>
+        <UnitName Value="objpas"/>
+        <CursorPos X="6" Y="282"/>
+        <TopLine Value="260"/>
+        <UsageCount Value="3"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\rtl\inc\crth.inc"/>
+        <CursorPos X="3" Y="30"/>
+        <TopLine Value="14"/>
+        <UsageCount Value="6"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\rtl\inc\lstrings.pp"/>
+        <UnitName Value="lstrings"/>
+        <CursorPos X="15" Y="267"/>
+        <TopLine Value="245"/>
+        <UsageCount Value="9"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\packages\fcl-db\src\sdf\sdfdata.pp"/>
+        <UnitName Value="SdfData"/>
+        <CursorPos X="49" Y="811"/>
+        <TopLine Value="801"/>
+        <UsageCount Value="7"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\rtl\gba\dos.pp"/>
+        <UnitName Value="Dos"/>
+        <CursorPos X="1" Y="81"/>
+        <TopLine Value="70"/>
+        <UsageCount Value="7"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\rtl\amiga\dos.pp"/>
+        <UnitName Value="Dos"/>
+        <CursorPos X="1" Y="212"/>
+        <TopLine Value="201"/>
+        <UsageCount Value="7"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="tgrid.pas"/>
+        <UnitName Value="TGrid"/>
+        <CursorPos X="21" Y="51"/>
+        <TopLine Value="31"/>
+        <UsageCount Value="10"/>
+      </Unit22>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="152" Column="1" TopLine="137"/>
+      </Position1>
+      <Position2>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="156" Column="1" TopLine="141"/>
+      </Position2>
+      <Position3>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="157" Column="1" TopLine="142"/>
+      </Position3>
+      <Position4>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="158" Column="1" TopLine="143"/>
+      </Position4>
+      <Position5>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="159" Column="1" TopLine="144"/>
+      </Position5>
+      <Position6>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="160" Column="1" TopLine="145"/>
+      </Position6>
+      <Position7>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="161" Column="1" TopLine="146"/>
+      </Position7>
+      <Position8>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="85" Column="1" TopLine="70"/>
+      </Position8>
+      <Position9>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="86" Column="1" TopLine="71"/>
+      </Position9>
+      <Position10>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="87" Column="1" TopLine="72"/>
+      </Position10>
+      <Position11>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="89" Column="1" TopLine="74"/>
+      </Position11>
+      <Position12>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="95" Column="1" TopLine="80"/>
+      </Position12>
+      <Position13>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="98" Column="1" TopLine="83"/>
+      </Position13>
+      <Position14>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="134" Column="1" TopLine="119"/>
+      </Position14>
+      <Position15>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="137" Column="1" TopLine="122"/>
+      </Position15>
+      <Position16>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="136" Column="1" TopLine="121"/>
+      </Position16>
+      <Position17>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="138" Column="1" TopLine="123"/>
+      </Position17>
+      <Position18>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="140" Column="1" TopLine="125"/>
+      </Position18>
+      <Position19>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="141" Column="1" TopLine="126"/>
+      </Position19>
+      <Position20>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="142" Column="1" TopLine="127"/>
+      </Position20>
+      <Position21>
+        <Filename Value="stage_controller.pas"/>
+        <Caret Line="150" Column="1" TopLine="129"/>
+      </Position21>
+      <Position22>
+        <Filename Value="stage_controller.pas"/>
+        <Caret Line="151" Column="1" TopLine="129"/>
+      </Position22>
+      <Position23>
+        <Filename Value="stage_controller.pas"/>
+        <Caret Line="150" Column="1" TopLine="129"/>
+      </Position23>
+      <Position24>
+        <Filename Value="stage_controller.pas"/>
+        <Caret Line="151" Column="1" TopLine="129"/>
+      </Position24>
+      <Position25>
+        <Filename Value="stage_controller.pas"/>
+        <Caret Line="150" Column="1" TopLine="129"/>
+      </Position25>
+      <Position26>
+        <Filename Value="stage_controller.pas"/>
+        <Caret Line="151" Column="1" TopLine="129"/>
+      </Position26>
+      <Position27>
+        <Filename Value="stage_controller.pas"/>
+        <Caret Line="150" Column="1" TopLine="129"/>
+      </Position27>
+      <Position28>
+        <Filename Value="stage_controller.pas"/>
+        <Caret Line="151" Column="1" TopLine="129"/>
+      </Position28>
+      <Position29>
+        <Filename Value="stage_controller.pas"/>
+        <Caret Line="150" Column="1" TopLine="129"/>
+      </Position29>
+      <Position30>
+        <Filename Value="tetris_v4.lpr"/>
+        <Caret Line="34" Column="7" TopLine="14"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="8"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)\"/>
+    </SearchPaths>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Watches Count="4">
+      <Item1>
+        <Expression Value="row"/>
+      </Item1>
+      <Item2>
+        <Expression Value="column"/>
+      </Item2>
+      <Item3>
+        <Expression Value="Buffer"/>
+      </Item3>
+      <Item4>
+        <Expression Value="direction"/>
+      </Item4>
+    </Watches>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

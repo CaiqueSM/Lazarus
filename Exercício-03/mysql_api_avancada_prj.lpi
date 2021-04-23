@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <PathDelim Value="\"/>
+    <Version Value="7"/>
+    <General>
+      <MainUnit Value="0"/>
+      <TargetFileExt Value=".exe"/>
+      <Icon Value="0"/>
+      <UseXPManifest Value="True"/>
+      <ActiveEditorIndexAtStart Value="0"/>
+    </General>
+    <VersionInfo>
+      <ProjectVersion Value=""/>
+      <Language Value=""/>
+      <CharSet Value=""/>
+    </VersionInfo>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="26">
+      <Unit0>
+        <Filename Value="mysql_api_avancada_prj.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="mysql_api_avancada_prj"/>
+        <CursorPos X="1" Y="20"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="4"/>
+        <UsageCount Value="36"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmTryMySQL"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="mysql_api_avancada"/>
+        <CursorPos X="43" Y="117"/>
+        <TopLine Value="102"/>
+        <EditorIndex Value="0"/>
+        <UsageCount Value="36"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="showquery.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmShowQuery"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="showquery"/>
+        <CursorPos X="28" Y="15"/>
+        <TopLine Value="13"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="36"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\lresources.pp"/>
+        <UnitName Value="LResources"/>
+        <CursorPos X="1" Y="1476"/>
+        <TopLine Value="1465"/>
+        <UsageCount Value="10"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\include\control.inc"/>
+        <CursorPos X="1" Y="2228"/>
+        <TopLine Value="2217"/>
+        <UsageCount Value="10"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\packages\mysql\src\mysql4types.inc"/>
+        <CursorPos X="3" Y="165"/>
+        <TopLine Value="184"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\include\customcombobox.inc"/>
+        <CursorPos X="1" Y="188"/>
+        <TopLine Value="177"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\packages\mysql\src\mysql4.pp"/>
+        <UnitName Value="mysql4"/>
+        <CursorPos X="10" Y="121"/>
+        <TopLine Value="110"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\include\buttoncontrol.inc"/>
+        <CursorPos X="1" Y="27"/>
+        <TopLine Value="16"/>
+        <UsageCount Value="10"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\include\buttons.inc"/>
+        <CursorPos X="1" Y="332"/>
+        <TopLine Value="314"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\include\wincontrol.inc"/>
+        <CursorPos X="1" Y="4921"/>
+        <TopLine Value="4910"/>
+        <UsageCount Value="10"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\lclmessageglue.pas"/>
+        <UnitName Value="LCLMessageGlue"/>
+        <CursorPos X="1" Y="142"/>
+        <TopLine Value="131"/>
+        <UsageCount Value="10"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\interfaces\win32\win32callback.inc"/>
+        <CursorPos X="1" Y="2735"/>
+        <TopLine Value="2714"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\stdctrls.pp"/>
+        <UnitName Value="StdCtrls"/>
+        <CursorPos X="28" Y="392"/>
+        <TopLine Value="390"/>
+        <UsageCount Value="10"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\forms.pp"/>
+        <UnitName Value="Forms"/>
+        <CursorPos X="19" Y="522"/>
+        <TopLine Value="511"/>
+        <UsageCount Value="10"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\include\customform.inc"/>
+        <CursorPos X="47" Y="1497"/>
+        <TopLine Value="1517"/>
+        <UsageCount Value="10"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\rtl\objpas\classes\classesh.inc"/>
+        <CursorPos X="20" Y="465"/>
+        <TopLine Value="454"/>
+        <UsageCount Value="10"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\comctrls.pp"/>
+        <UnitName Value="ComCtrls"/>
+        <CursorPos X="14" Y="1014"/>
+        <TopLine Value="1003"/>
+        <UsageCount Value="10"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.4\source\rtl\objpas\classes\collect.inc"/>
+        <CursorPos X="3" Y="287"/>
+        <TopLine Value="285"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="..\..\..\..\..\..\..\..\lazarus\lcl\include\control.inc"/>
+        <CursorPos X="1" Y="2228"/>
+        <TopLine Value="2217"/>
+        <UsageCount Value="10"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="..\..\..\..\..\..\..\..\lazarus\lcl\include\listitems.inc"/>
+        <CursorPos X="1" Y="34"/>
+        <TopLine Value="18"/>
+        <UsageCount Value="10"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="..\..\..\..\..\..\..\..\lazarus\lcl\lresources.pp"/>
+        <UnitName Value="LResources"/>
+        <CursorPos X="1" Y="1476"/>
+        <TopLine Value="1471"/>
+        <UsageCount Value="10"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="mysql_api_avancada_prj.lrs"/>
+        <CursorPos X="1" Y="1"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="10"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="..\..\..\..\..\..\..\..\lazarus\fpc\2.2.4\source\rtl\inc\objpash.inc"/>
+        <CursorPos X="23" Y="151"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="10"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="..\..\..\..\..\..\..\..\lazarus\lcl\forms.pp"/>
+        <UnitName Value="Forms"/>
+        <CursorPos X="44" Y="637"/>
+        <TopLine Value="613"/>
+        <EditorIndex Value="2"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="..\..\..\..\..\..\..\..\lazarus\fpc\2.2.4\source\rtl\objpas\classes\classesh.inc"/>
+        <CursorPos X="3" Y="1458"/>
+        <TopLine Value="1443"/>
+        <EditorIndex Value="3"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit25>
+    </Units>
+    <JumpHistory Count="29" HistoryIndex="28">
+      <Position1>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="141" Column="1" TopLine="130"/>
+      </Position1>
+      <Position2>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="139" Column="1" TopLine="128"/>
+      </Position2>
+      <Position3>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="140" Column="1" TopLine="129"/>
+      </Position3>
+      <Position4>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="141" Column="1" TopLine="130"/>
+      </Position4>
+      <Position5>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="139" Column="1" TopLine="128"/>
+      </Position5>
+      <Position6>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="140" Column="1" TopLine="129"/>
+      </Position6>
+      <Position7>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="141" Column="1" TopLine="130"/>
+      </Position7>
+      <Position8>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="136" Column="32" TopLine="128"/>
+      </Position8>
+      <Position9>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="114" Column="1" TopLine="98"/>
+      </Position9>
+      <Position10>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="117" Column="2" TopLine="98"/>
+      </Position10>
+      <Position11>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="117" Column="2" TopLine="1"/>
+      </Position11>
+      <Position12>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="115" Column="50" TopLine="109"/>
+      </Position12>
+      <Position13>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="28" Column="5" TopLine="101"/>
+      </Position13>
+      <Position14>
+        <Filename Value="mysql_api_avancada_prj.lpr"/>
+        <Caret Line="15" Column="1" TopLine="1"/>
+      </Position14>
+      <Position15>
+        <Filename Value="mysql_api_avancada_prj.lpr"/>
+        <Caret Line="17" Column="1" TopLine="1"/>
+      </Position15>
+      <Position16>
+        <Filename Value="mysql_api_avancada_prj.lpr"/>
+        <Caret Line="18" Column="1" TopLine="1"/>
+      </Position16>
+      <Position17>
+        <Filename Value="mysql_api_avancada_prj.lpr"/>
+        <Caret Line="19" Column="1" TopLine="1"/>
+      </Position17>
+      <Position18>
+        <Filename Value="mysql_api_avancada_prj.lpr"/>
+        <Caret Line="20" Column="1" TopLine="1"/>
+      </Position18>
+      <Position19>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="114" Column="1" TopLine="103"/>
+      </Position19>
+      <Position20>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="115" Column="1" TopLine="104"/>
+      </Position20>
+      <Position21>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="116" Column="1" TopLine="105"/>
+      </Position21>
+      <Position22>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="117" Column="21" TopLine="102"/>
+      </Position22>
+      <Position23>
+        <Filename Value="showquery.pas"/>
+        <Caret Line="15" Column="28" TopLine="13"/>
+      </Position23>
+      <Position24>
+        <Filename Value="..\..\..\..\..\..\..\..\lazarus\lcl\forms.pp"/>
+        <Caret Line="637" Column="39" TopLine="613"/>
+      </Position24>
+      <Position25>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="117" Column="49" TopLine="102"/>
+      </Position25>
+      <Position26>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="114" Column="1" TopLine="99"/>
+      </Position26>
+      <Position27>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="115" Column="1" TopLine="100"/>
+      </Position27>
+      <Position28>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="116" Column="1" TopLine="101"/>
+      </Position28>
+      <Position29>
+        <Filename Value="mysql_api_avancada.pas"/>
+        <Caret Line="117" Column="1" TopLine="102"/>
+      </Position29>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="8"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)\"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Source Value="mysql_api_avancada.pas"/>
+        <Line Value="107"/>
+      </Item1>
+    </BreakPoints>
+    <Watches Count="2">
+      <Item1>
+        <Expression Value="mysql_fetch_row(tablenamesBuffer)"/>
+      </Item1>
+      <Item2>
+        <Expression Value="atable"/>
+      </Item2>
+    </Watches>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

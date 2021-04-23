@@ -1,0 +1,164 @@
+unit Naves_Library;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Game_models, graph, crt;
+
+type
+  { veiculo }
+
+  vehicle = class(Person)
+  private
+    VehicleLife:    integer;
+    VehicleAttack:  integer;
+    VehicleCanShot: boolean;
+  public
+    property Life: integer Read VehicleLife Write VehicleLife;
+    property Attack: integer Read VehicleAttack Write VehicleAttack;
+    property CanShot: boolean Read VehicleCanShot Write VehicleCanShot;
+
+  public
+    constructor Create(m, n: integer);
+  end;
+
+  { player }
+
+  Player = class(vehicle)
+  private
+    PlayerBlast: integer;
+  public
+    property Blast: integer Read PlayerBlast Write PlayerBlast;
+    constructor Create(m, n: integer);
+  end;
+
+  { SpaceShip }
+
+  SpaceShip = class(vehicle)
+  public
+    constructor Create(m, n: integer);
+  end;
+
+  { MotherShip }
+
+  MotherShip = class(vehicle)
+  private
+    MotherShipBlast: integer;
+  public
+    property Blast: integer Read MotherShipBlast Write MotherShipBlast;
+    constructor Create;
+  end;
+
+  { Projetil }
+
+  Shot = class(Person)
+  private
+    ShotDamage: integer;
+    ShotOwner:  vehicle;
+  public
+    property Damage: integer Read ShotDamage Write ShotDamage;
+    property Owner: vehicle Read ShotOwner;
+  public
+    constructor Create(Attack, x, y: integer);
+    //procedure DesenharProjetil;
+    procedure Shooter(var AOwner: vehicle);
+  end;
+
+implementation
+
+{ vehicle }
+
+constructor vehicle.Create(m, n: integer);
+begin
+  inherited Create(m, n);
+  Direction := 2;
+  State     := True;
+  CanShot   := True;
+end;
+
+{ Shot }
+
+constructor Shot.Create(Attack, x, y: integer);
+begin
+  inherited Create(1, 1);
+  Color     := 1;
+  Damage    := Attack;
+  State     := True;
+  Direction := 1;
+  PositionX := x;
+  PositionY := y;
+  Shape.Grid[0][0] := 1;
+end;
+
+{procedure Shot.DesenharProjetil;
+begin
+  SetColor(Color);
+  Circle((PositionX + 1) * 16, (PositionY + 2) * 16, 9);
+end;}
+
+procedure Shot.Shooter(var AOwner: vehicle);
+begin
+  ShotOwner := AOwner;
+end;
+
+{ player }
+
+constructor player.Create(m, n: integer);
+begin
+  inherited Create(m, n);
+  Life   := 5;
+  Attack := 3;
+  Color  := Yellow;
+  Blast  := 0;
+  Shape.Grid[1][1] := 1;
+  Shape.Grid[2][0] := 1;
+  Shape.Grid[2][1] := 1;
+  Shape.Grid[2][2] := 1;
+end;
+
+{ SpaceShip }
+
+constructor SpaceShip.Create(m, n: integer);
+begin
+  inherited Create(m, n);
+  Life  := 6;
+  Color := Random(15) + 1;
+  if Color = 8 then
+    Attack := 2
+  else
+    Attack := 1;
+  Shape.Grid[0][0] := 1;
+  Shape.Grid[0][2] := 1;
+  Shape.Grid[1][1] := 1;
+end;
+
+{ MotherShip }
+
+constructor MotherShip.Create;
+begin
+  inherited Create(3, 7);
+  Life   := 50;
+  Attack := 3;
+  Blast  := 0;
+  Color  := 8;
+  Shape.Grid[0][1] := 1;
+  Shape.Grid[0][2] := 1;
+  Shape.Grid[0][3] := 1;
+  Shape.Grid[0][4] := 1;
+  Shape.Grid[0][5] := 1;
+  Shape.Grid[1][0] := 1;
+  Shape.Grid[1][1] := 1;
+  Shape.Grid[1][2] := 1;
+  Shape.Grid[1][3] := 1;
+  Shape.Grid[1][4] := 1;
+  Shape.Grid[1][5] := 1;
+  Shape.Grid[1][6] := 1;
+  Shape.Grid[2][1] := 1;
+  Shape.Grid[2][3] := 1;
+  Shape.Grid[2][5] := 1;
+end;
+
+end.
+

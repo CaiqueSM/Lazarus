@@ -1,0 +1,177 @@
+object frmTryMySQL: TfrmTryMySQL
+  Left = 287
+  Height = 432
+  Top = 88
+  Width = 400
+  Caption = 'TryMySQL'
+  ClientHeight = 432
+  ClientWidth = 400
+  OnCloseQuery = FormCloseQuery
+  LCLVersion = '0.9.28.2'
+  object Label1: TLabel
+    Left = 8
+    Height = 16
+    Top = 8
+    Width = 29
+    Caption = 'Host:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 16
+    Top = 48
+    Width = 57
+    Caption = 'Username:'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Height = 16
+    Top = 88
+    Width = 54
+    Caption = 'Password:'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 168
+    Height = 16
+    Top = 8
+    Width = 112
+    Caption = 'Enter SQL Command'
+    ParentColor = False
+  end
+  object lblDataBase: TLabel
+    Left = 8
+    Height = 16
+    Top = 168
+    Width = 52
+    Caption = 'DataBase:'
+    ParentColor = False
+  end
+  object lblTable: TLabel
+    Left = 8
+    Height = 16
+    Top = 248
+    Width = 32
+    Caption = 'Table:'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 8
+    Height = 16
+    Top = 288
+    Width = 34
+    Caption = 'Fields:'
+    ParentColor = False
+  end
+  object txtHost: TEdit
+    Left = 8
+    Height = 23
+    Top = 24
+    Width = 136
+    TabOrder = 0
+  end
+  object txtUsername: TEdit
+    Left = 8
+    Height = 23
+    Top = 64
+    Width = 136
+    TabOrder = 1
+  end
+  object txtPassword: TEdit
+    Left = 8
+    Height = 23
+    Top = 104
+    Width = 136
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 2
+  end
+  object txtCommand: TEdit
+    Left = 168
+    Height = 23
+    Top = 24
+    Width = 216
+    TabOrder = 3
+  end
+  object btnConnect: TButton
+    Left = 8
+    Height = 25
+    Top = 136
+    Width = 136
+    Caption = 'Connect to Server'
+    OnClick = btnConnectClick
+    TabOrder = 4
+  end
+  object btnselectDB: TButton
+    Left = 8
+    Height = 25
+    Top = 216
+    Width = 136
+    Caption = 'Select Database'
+    Enabled = False
+    OnClick = btnselectDBClick
+    TabOrder = 5
+  end
+  object btnExit: TButton
+    Left = 8
+    Height = 25
+    Top = 376
+    Width = 75
+    Caption = 'Exit'
+    OnClick = btnExitClick
+    TabOrder = 6
+  end
+  object btnOpenQuery: TButton
+    Left = 168
+    Height = 25
+    Top = 56
+    Width = 75
+    Caption = 'Open Query'
+    Enabled = False
+    OnClick = btnOpenQueryClick
+    TabOrder = 7
+  end
+  object cboDatabase: TComboBox
+    Left = 8
+    Height = 23
+    Top = 184
+    Width = 136
+    ItemHeight = 15
+    OnChange = cboDatabaseChange
+    TabOrder = 8
+  end
+  object cboTable: TComboBox
+    Left = 8
+    Height = 23
+    Top = 264
+    Width = 136
+    ItemHeight = 15
+    OnChange = cboTableChange
+    TabOrder = 9
+  end
+  object lstField: TListBox
+    Left = 8
+    Height = 65
+    Top = 304
+    Width = 136
+    ItemHeight = 0
+    TabOrder = 10
+  end
+  object MemResults: TMemo
+    Left = 168
+    Height = 281
+    Top = 88
+    Width = 216
+    ScrollBars = ssAutoBoth
+    TabOrder = 11
+  end
+  object stbTrymysql: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 409
+    Width = 400
+    Panels = <>
+    SimpleText = 'TryMySQL'
+  end
+end

@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <PathDelim Value="\"/>
+    <Version Value="7"/>
+    <General>
+      <MainUnit Value="0"/>
+      <TargetFileExt Value=".exe"/>
+      <Icon Value="0"/>
+      <UseXPManifest Value="True"/>
+      <ActiveEditorIndexAtStart Value="0"/>
+    </General>
+    <VersionInfo>
+      <ProjectVersion Value=""/>
+      <Language Value=""/>
+      <CharSet Value=""/>
+    </VersionInfo>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="11">
+      <Unit0>
+        <Filename Value="sequencia_de_fibonacci.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="sequencia_de_fibonacci"/>
+        <CursorPos X="2" Y="1"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="80"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="fibonacci_source.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Fibonacci_source"/>
+        <CursorPos X="47" Y="76"/>
+        <TopLine Value="61"/>
+        <EditorIndex Value="0"/>
+        <UsageCount Value="80"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\Aula 3\cadastro_source.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadastro_source"/>
+        <CursorPos X="148" Y="39"/>
+        <TopLine Value="39"/>
+        <UsageCount Value="10"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="sequencia_de_fibonacci.lrs"/>
+        <CursorPos X="1" Y="5236"/>
+        <TopLine Value="5215"/>
+        <UsageCount Value="7"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\Aula4\cadastro2_source.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Cadastro2_source"/>
+        <CursorPos X="1" Y="1"/>
+        <TopLine Value="57"/>
+        <UsageCount Value="7"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\include\control.inc"/>
+        <CursorPos X="1" Y="2228"/>
+        <TopLine Value="2217"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\include\buttoncontrol.inc"/>
+        <CursorPos X="1" Y="1"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="17"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\include\buttons.inc"/>
+        <CursorPos X="1" Y="332"/>
+        <TopLine Value="314"/>
+        <UsageCount Value="9"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\include\wincontrol.inc"/>
+        <CursorPos X="1" Y="1"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="9"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\lclmessageglue.pas"/>
+        <UnitName Value="LCLMessageGlue"/>
+        <CursorPos X="1" Y="107"/>
+        <TopLine Value="85"/>
+        <UsageCount Value="9"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\..\..\..\..\lazarus\lcl\interfaces\win32\win32callback.inc"/>
+        <CursorPos X="1" Y="2735"/>
+        <TopLine Value="2724"/>
+        <UsageCount Value="9"/>
+      </Unit10>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="57" Column="1" TopLine="46"/>
+      </Position1>
+      <Position2>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="63" Column="1" TopLine="52"/>
+      </Position2>
+      <Position3>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="48" Column="1" TopLine="37"/>
+      </Position3>
+      <Position4>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="50" Column="1" TopLine="39"/>
+      </Position4>
+      <Position5>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="51" Column="1" TopLine="40"/>
+      </Position5>
+      <Position6>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="57" Column="1" TopLine="46"/>
+      </Position6>
+      <Position7>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="59" Column="1" TopLine="48"/>
+      </Position7>
+      <Position8>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="66" Column="1" TopLine="55"/>
+      </Position8>
+      <Position9>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="48" Column="1" TopLine="37"/>
+      </Position9>
+      <Position10>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="50" Column="1" TopLine="39"/>
+      </Position10>
+      <Position11>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="51" Column="1" TopLine="40"/>
+      </Position11>
+      <Position12>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="53" Column="1" TopLine="42"/>
+      </Position12>
+      <Position13>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="66" Column="1" TopLine="55"/>
+      </Position13>
+      <Position14>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="48" Column="1" TopLine="37"/>
+      </Position14>
+      <Position15>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="50" Column="1" TopLine="39"/>
+      </Position15>
+      <Position16>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="51" Column="1" TopLine="40"/>
+      </Position16>
+      <Position17>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="57" Column="1" TopLine="46"/>
+      </Position17>
+      <Position18>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="59" Column="1" TopLine="48"/>
+      </Position18>
+      <Position19>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="66" Column="1" TopLine="55"/>
+      </Position19>
+      <Position20>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="107" Column="1" TopLine="91"/>
+      </Position20>
+      <Position21>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="59" Column="38" TopLine="44"/>
+      </Position21>
+      <Position22>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="51" Column="34" TopLine="44"/>
+      </Position22>
+      <Position23>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="62" Column="5" TopLine="50"/>
+      </Position23>
+      <Position24>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="110" Column="27" TopLine="96"/>
+      </Position24>
+      <Position25>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="77" Column="22" TopLine="44"/>
+      </Position25>
+      <Position26>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="40" Column="16" TopLine="32"/>
+      </Position26>
+      <Position27>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="70" Column="14" TopLine="70"/>
+      </Position27>
+      <Position28>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="79" Column="26" TopLine="59"/>
+      </Position28>
+      <Position29>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="38" Column="5" TopLine="26"/>
+      </Position29>
+      <Position30>
+        <Filename Value="fibonacci_source.pas"/>
+        <Caret Line="73" Column="11" TopLine="67"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="8"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)\"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Watches Count="5">
+      <Item1>
+        <Expression Value="cont"/>
+      </Item1>
+      <Item2>
+        <Expression Value="n"/>
+      </Item2>
+      <Item3>
+        <Expression Value="algoritmo_dumb(n-2)"/>
+      </Item3>
+      <Item4>
+        <Expression Value="algoritmo_dumb(n-1)"/>
+      </Item4>
+      <Item5>
+        <Expression Value="algoritmo_dumb"/>
+      </Item5>
+    </Watches>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

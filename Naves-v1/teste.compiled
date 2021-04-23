@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Compiler Value="c:\lazarus\fpc\2.2.4\bin\i386-win32\fpc.exe" Date="995713770"/>
+  <Params Value=" -MObjFPC -Scgi -O1 -gl -vewnhi -l &quot;-FuC:\Users\caique\Documents\jogos\Meus jogos em pascal\Framework\&quot; -Fu. &quot;-FEC:\Users\caique\Documents\jogos\Meus jogos em pascal\Framework\&quot; -oteste.exe teste.lpr"/>
+</CONFIG>
